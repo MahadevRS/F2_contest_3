@@ -1,0 +1,91 @@
+body {
+    font-family: Inter;
+    background-color: black;
+    color: white;
+}
+
+img {
+    width: 20px;
+}
+
+#hearder-container {
+    display: flex;
+    margin: 20px 50px;
+    align-self: center;
+    gap: 50px;
+
+}
+
+#search_input {
+    width: 686px;
+    height: 60px;
+    border: 2px solid #8E8E8E;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: black;
+    color: #FFFFFF;
+    padding-left: 20px;
+}
+
+#sort-by-mkt-cap-button {
+    width: 246px;
+    height: 60px;
+    border: 2px solid #8E8E8E;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: black;
+    color: #FFFFFF;
+}
+
+#sort-by-per-change-button {
+    width: 246px;
+    height: 60px;
+    border: 2px solid #8E8E8E;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: black;
+    color: #FFFFFF;
+}
+
+#table-container{
+    margin: 40px 30px;
+    width: 90%;
+    
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    border-bottom: 2px solid gainsboro ;
+}
+tr{
+    height: 50px;
+}
+td{
+    border-bottom: 2px solid gainsboro ;
+}
+#logo{
+    width: 25px;
+    text-align: center;
+}
+
+#name{
+    text-align: start;
+    padding: 10px 20px;
+}
+
+#symbol{
+    text-align: center;
+}
+
+#name-heading{
+    text-align: start;
+    padding: 10px 20px;
+}
+
+#current_price, #volume, #change, #mkt_cap{
+    text-align: end;
+}

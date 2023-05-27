@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRS-F2_C3</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="hearder-container">
+
+        <input type="search" onkeyup="inputChanged()" name="search" id="search_input"
+            placeholder="Search By Name or Symbol">
+
+        <button id="sort-by-mkt-cap-button" onclick="sortByMkt()">Sort By Mkt Cap</button>
+
+        <button id="sort-by-per-change-button" onclick="sortByPercentage()">Sort by percentage</button>
+
+    </div>
+
+    <table id="table-container">
+
+        <thead>
+            <th id="logo">Logo</th>
+            <th id="name-heading">Name</th>
+            <th id="symbol">Symbol</th>
+            <th id="current_price">Current Price</th>
+            <th id="volume">Total Volume</th>
+            <th id="change">Percentage Change</th>
+            <th id="mkt_cap">Market Cap</th>
+        </thead>
+
+        <tbody id="table-body">
+
+        </tbody>
+
+    </table>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
