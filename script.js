@@ -1,5 +1,6 @@
 let arr = [];
 
+/*
 let response = fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false");
 
 response.then((data) => {
@@ -9,22 +10,28 @@ response.then((data) => {
         addDatatoTable(info);
         arr = info;
     });
-
-    promise.catch((info) => {
-
-    });
-
 });
-
 response.catch(() => {
     alert("Somenthing went wrong");
 })
+*/
 
-console.log(arr);
+async function loadData(){
 
-setTimeout(() => {
-    console.log(arr);
-}, 4000)
+    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false");
+
+    let promise = await response.json();
+
+    return promise;
+
+}
+
+let x = loadData();
+
+x.then((data) => {
+    arr = data;
+    addDatatoTable(arr);
+});
 
 function addDatatoTable(arr) {
 
@@ -66,10 +73,10 @@ function addDatatoTable(arr) {
         let change = document.createElement('td');
         change.id = "change";
         change.innerText = arr[i].price_change_percentage_24h.toFixed(2) + "%";
-        if(arr[i].price_change_percentage_24h >=0){
-            change.style.color= "green";
+        if (arr[i].price_change_percentage_24h >= 0) {
+            change.style.color = "green";
         }
-        else{
+        else {
             change.style.color = "red";
         }
         tr.append(change);
