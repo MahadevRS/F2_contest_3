@@ -1,38 +1,3 @@
-// async function loadData(arr) {
-
-//     let response = fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false");
-
-//     response.then((data) => {
-//         let promise = data.json();
-
-//         promise.then((info) => {
-//             addDatatoTable(info);
-//             loaded(info);
-
-
-
-
-//         });
-
-//         promise.catch((info) => {
-
-//         });
-
-//     });
-
-//     response.catch(() => {
-//         alert("Somenthing went wrong");
-//     })
-
-// }
-// let array = [];
-// array = loadData(array);
-
-// function loaded(arr) {
-//     console.log(arr);
-// }
-
-
 let arr = [];
 
 let response = fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false");
